@@ -104,21 +104,26 @@ main {
 
 /* Video */
 .wsuwp-youtube-wrap-outer {
-	margin-top: calc(-4rem - 10vh);
-	width: calc(50vw + 594px);
+	bottom: -1rem;
+	left: 50%;
+	position: absolute;
+	width: 50%;
 }
 
 .wuswp-youtube-wrap-inner {
-	padding-bottom: 56.25%;
+	border: 1rem solid #981e32;
+	background: #fff;
+	padding-bottom: calc(56.25% - 2rem);
 	position: relative;
 }
 
 .wuswp-youtube-wrap-inner iframe {
-	height: 100%;
-	left: 0;
+	height: calc(100% + 2rem);
+	left: -1rem;
+	mix-blend-mode: multiply;
 	position: absolute;
-	top: 0;
-	width: 100%;
+	top: -1rem;
+	width: calc(100% + 2rem);
 }
 
 /* Points sections */
@@ -127,11 +132,6 @@ main {
 	flex-direction: column;
 	justify-content: flex-end;
 	min-height: 100vh;
-}
-
-.why-wsu {
-	padding: 2rem;
-	text-align: center;
 }
 
 .multiply {
