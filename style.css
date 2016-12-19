@@ -1,0 +1,224 @@
+/*
+ Theme Name:     Why WSU
+ Theme URI:      https://web.wsu.edu
+ Description:    A WSU Spine child theme for why.wsu.edu
+ Author:         WSU University Communications
+ Author URI:     https://web.wsu.edu
+ Template:       spine
+ Version:        0.0.1
+ License:        GNU General Public License v2 or later,
+                 using licensed Manus font from MyFonts
+ License URI:    http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3227938, 2016-06-03T12:42:07-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Manus by JOEBOB graphics
+ * URL: http://www.myfonts.com/fonts/joebob/manus/regular/
+ * Copyright: &#x00A9; 2014 GEERT
+ * Licensed pageviews: 1,000,000
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3227938
+ *
+ * © 2016 MyFonts Inc
+ */
+@import url(//hello.myfonts.net/count/314122);
+
+@font-face {
+	font-family: Manus;
+	src: url(webfonts/314122_0_0.eot);
+	src:
+		url(webfonts/314122_0_0.eot?#iefix) format(embedded-opentype),
+		url(webfonts/314122_0_0.woff2) format(woff2),
+		url(webfonts/314122_0_0.woff) format(woff),
+		url(webfonts/314122_0_0.ttf) format(truetype);
+}
+
+/* General */
+#jacket:before {
+	background: #981e32;
+	content: "";
+	height: 5px;
+	position: fixed;
+	width: 100vw;
+	z-index: 2;
+}
+
+main {
+	color: #fff;
+}
+
+.section-wrapper-has-background {
+	background-size: cover;
+}
+
+@media only screen and (min-width: 990px) {
+
+	#binder.fluid.max-1188,
+	#binder.fluid.max-1188 .row {
+		max-width: none;
+	}
+}
+
+/* Spine > pillar */
+#spine.cropped {
+	left: 0 !important;
+	margin: 0 auto;
+	max-width: 1188px;
+	right: 0 !important;
+	top: 0 !important;
+	width: calc(100% - 4rem);
+}
+
+#spine.skimmed {
+	display: none;
+}
+
+#spine.cropped #glue {
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	width: 99px;
+}
+
+.spine-header {
+	bottom: 0;
+	height: 99px;
+	position: absolute;
+	width: 100%;
+}
+
+#wsu-actions {
+	display: none;
+}
+
+/* Top section */
+.intro .column {
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	min-height: 100vh;
+}
+
+.intro p {
+	font-family: Manus;
+	min-height: 30px;
+	min-width: 347px;
+}
+
+/* Video */
+.wsuwp-youtube-wrap-outer {
+	margin-top: calc(-4rem - 10vh);
+	width: calc(50vw + 594px);
+}
+
+.wuswp-youtube-wrap-inner {
+	padding-bottom: 56.25%;
+	position: relative;
+}
+
+.wuswp-youtube-wrap-inner iframe {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/* Points sections */
+.points {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	min-height: 100vh;
+}
+
+.why-wsu {
+	padding: 2rem;
+	text-align: center;
+}
+
+.multiply {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	list-style: none;
+	padding: 2rem;
+	position: relative;
+}
+
+.multiply:before {
+	content: "";
+	height: 100%;
+	left: 0;
+	mix-blend-mode: multiply;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.multiply.crimson:before {
+	background: #981e32;
+}
+
+.no-mix-blend-mode .multiply.crimson:before {
+	background: rgba(152, 30, 50, .9);
+}
+
+.multiply li {
+	opacity: 0;
+	position: relative;
+	-webkit-transition: opacity .25s;
+	transition: opacity .25s;
+	width: 25%;
+	z-index: 1;
+}
+
+.multiply li + li {
+	margin-left: 2rem;
+}
+
+.multiply li.show {
+	opacity: 1;
+}
+
+/* Button */
+.action {
+	text-align: center;
+}
+
+.action a {
+	border: 1px solid #981e32;
+	display: inline-block;
+	padding: 1rem 2rem;
+	width: auto;
+}
+/*# sourceMappingURL=style.css.map */

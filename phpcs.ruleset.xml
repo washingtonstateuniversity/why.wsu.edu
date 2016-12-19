@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ruleset name="Why WSU Theme">
+    <description>Sniffs for the coding standards of the Why WSU Theme</description>
+
+    <rule ref="WordPress-Extra">
+        <exclude name="WordPress.NamingConventions.ValidFunctionName" />
+        <exclude name="WordPress.Files.FileName" />
+    </rule>
+</ruleset>
