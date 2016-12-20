@@ -10,6 +10,17 @@
 		}
 	}, false );
 
+	// Fire intro text effects.
+	function introText() {
+		$( ".intro p span" ).each( function( i ) {
+			var span = $( this );
+
+			setTimeout( function() {
+				span.addClass( "show" );
+			}, i * 500 );
+		} );
+	}
+
 	// Check if the list is in the viewport.
 	function inViewport( list ) {
 		var listTop = list.getBoundingClientRect().top,
@@ -54,6 +65,7 @@
 
 	// Fire functions once the document is ready.
 	$( document ).ready( function() {
+		introText();
 		animateListItems();
 	} );
 }( jQuery, window, document ) );
