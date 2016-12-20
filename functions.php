@@ -64,7 +64,7 @@ class Why_WSU_Theme {
 	 * @since 0.0.1
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_script( 'why', get_stylesheet_directory_uri() . '/js/scripts.min.js', array( 'jquery' ), $this->script_version, true );
+		wp_enqueue_script( 'why', get_stylesheet_directory_uri() . '/js/scripts.min.js', array( 'jquery', 'wsuwp-youtube-embed' ), $this->script_version, true );
 		wp_dequeue_script( 'wsu-spine' );
 	}
 
