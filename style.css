@@ -26,20 +26,23 @@
  * Copyright: &#x00A9; 2014 GEERT
  * Licensed pageviews: 1,000,000
  *
+ *
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=3227938
  *
  * © 2016 MyFonts Inc
  */
+
+/* @import must be at top of file, otherwise CSS will not work */
 @import url(//hello.myfonts.net/count/314122);
 
 @font-face {
 	font-family: Manus;
 	src: url(webfonts/314122_0_0.eot);
 	src:
-		url(webfonts/314122_0_0.eot?#iefix) format(embedded-opentype),
-		url(webfonts/314122_0_0.woff2) format(woff2),
-		url(webfonts/314122_0_0.woff) format(woff),
-		url(webfonts/314122_0_0.ttf) format(truetype);
+		url(webfonts/314122_0_0.eot?#iefix) format("embedded-opentype"),
+		url(webfonts/314122_0_0.woff2) format("woff2"),
+		url(webfonts/314122_0_0.woff) format("woff"),
+		url(webfonts/314122_0_0.ttf) format("truetype");
 }
 
 /* General */
