@@ -26,20 +26,23 @@
  * Copyright: &#x00A9; 2014 GEERT
  * Licensed pageviews: 1,000,000
  *
+ *
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=3227938
  *
  * © 2016 MyFonts Inc
  */
+
+/* @import must be at top of file, otherwise CSS will not work */
 @import url(//hello.myfonts.net/count/314122);
 
 @font-face {
 	font-family: Manus;
 	src: url(webfonts/314122_0_0.eot);
 	src:
-		url(webfonts/314122_0_0.eot?#iefix) format(embedded-opentype),
-		url(webfonts/314122_0_0.woff2) format(woff2),
-		url(webfonts/314122_0_0.woff) format(woff),
-		url(webfonts/314122_0_0.ttf) format(truetype);
+		url(webfonts/314122_0_0.eot?#iefix) format("embedded-opentype"),
+		url(webfonts/314122_0_0.woff2) format("woff2"),
+		url(webfonts/314122_0_0.woff) format("woff"),
+		url(webfonts/314122_0_0.ttf) format("truetype");
 }
 
 /* General */
@@ -52,12 +55,21 @@
 	z-index: 2;
 }
 
-main {
-	color: #fff;
+.section-wrapper-has-background {
+	background-position: center;
+	background-size: cover;
 }
 
-.section-wrapper-has-background {
-	background-size: cover;
+.fluid .row.single .column {
+	float: none;
+	margin: 0 auto;
+	max-width: 1188px;
+	width: calc(100% - 2rem);
+}
+
+h2 {
+	font-family: Manus;
+	font-size: 2rem;
 }
 
 @media only screen and (min-width: 990px) {
@@ -68,40 +80,216 @@ main {
 	}
 }
 
-/* Spine > pillar */
-#spine.cropped {
-	left: 0 !important;
+/* Pillar */
+.pillar {
+	left: 0;
 	margin: 0 auto;
 	max-width: 1188px;
-	right: 0 !important;
-	top: 0 !important;
+	position: absolute;
+	right: 0;
+	top: 0;
 	width: calc(100% - 4rem);
 }
 
-#spine.skimmed {
-	display: none;
-}
-
-#spine.cropped #glue {
-	overflow: hidden;
+.pillar a {
+	background: #981e32;
+	display: block;
+	height: 193px;
 	position: absolute;
 	right: 0;
-	width: 99px;
+	top: 0;
+	width: 116px;
+	z-index: 3;
 }
 
-.spine-header {
+.pillar svg {
 	bottom: 0;
-	height: 99px;
 	position: absolute;
-	width: 100%;
-}
-
-#wsu-actions {
-	display: none;
 }
 
 /* Top section */
 .intro .column {
+	color: #fff;
+	min-height: 100vh;
+	text-align: center;
+}
+
+.intro h1 {
+	font-size: 1em;
+	font-weight: 600;
+	letter-spacing: 12px;
+	padding: 200px 0 40px;
+	text-transform: uppercase;
+}
+
+.intro p {
+	font-family: Manus;
+	font-size: 5rem;
+}
+
+.intro p span {
+	opacity: 0;
+	-webkit-transition: opacity .25s;
+	transition: opacity .25s;
+}
+
+.intro p span.show {
+	opacity: 1;
+}
+
+/* Video */
+.wsuwp-youtube-wrap-outer {
+	bottom: -2rem;
+	left: 50%;
+	position: absolute;
+	width: 50vw;
+}
+
+.wuswp-youtube-wrap-inner {
+	border: 2rem solid #981e32;
+	background: #fff;
+	padding-bottom: calc(56.25% - 4rem);
+	position: relative;
+}
+
+.wuswp-youtube-wrap-inner iframe {
+	height: calc(100% + 4rem);
+	left: -2rem;
+	mix-blend-mode: multiply;
+	position: absolute;
+	top: -2rem;
+	width: calc(100% + 4rem);
+	z-index: 1;
+}
+
+/* Why WSU */
+.why-wsu .column {
+	min-height: 100vh;
+}
+
+.why-wsu ul {
+	bottom: 0;
+	position: absolute;
+}
+
+.why-wsu li {
+	color: #fff;
+	position: relative;
+	width: 50%;
+	z-index: 1;
+}
+
+.why-wsu li + li {
+	margin-left: 2rem;
+}
+
+/* Multiply */
+.multiply {
+	position: relative;
+}
+
+.multiply:before {
+	background: #981e32;
+	content: "";
+	height: 100%;
+	left: calc(-50vw + 594px);
+	mix-blend-mode: multiply;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+}
+
+.no-mix-blend-mode .multiply:before {
+	background: rgba(152, 30, 50, .9);
+}
+
+/* Animation */
+.animate {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	list-style: none;
+	padding: 2rem 0 4rem;
+}
+
+.animate > li {
+	overflow: hidden;
+	position: relative;
+}
+
+.animate > li > div {
+	left: -105%;
+	position: relative;
+	-webkit-transition: left .4s cubic-bezier(.02, .01, .47, 1);
+	transition: left .4s cubic-bezier(.02, .01, .47, 1);
+}
+
+.animate > li.show > div {
+	left: 0;
+}
+
+/* Quote */
+.quote {
+	background: #fff;
+	text-align: center;
+}
+
+.quote blockquote {
+	color: #4c4c4c;
+	display: block;
+	font-size: 1.2em;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-weight: 100;
+	margin: 0 auto;
+	max-width: 1188px;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+
+.quote blockquote:before {
+	color: #b7203d;
+	content: open-quote;
+	display: block;
+	font-size: 9em;
+	font-family: Arial, sans-serif;
+	font-weight: 300;
+}
+
+.quote cite {
+	display: block;
+	font-size: .7em;
+	margin: 10px 0 0;
+	padding: 0;
+	text-indent: 0;
+}
+
+/* Cougar advantage */
+.cougar-advantage {
+	background: #f2f4f5;
+}
+
+.cougar-advantage ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	left: calc(-50vw + 594px);
+	list-style: none;
+	padding: 0;
+	position: relative;
+	width: 100vw;
+}
+
+.cougar-advantage li {
+	box-sizing: border-box;
+	padding: 0;
+	width: 25%;
+}
+
+.cougar-advantage li.text {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
@@ -115,99 +303,52 @@ main {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	min-height: 100vh;
-}
-
-.intro p {
-	font-family: Manus;
-	min-height: 30px;
-	min-width: 347px;
-}
-
-/* Video */
-.wsuwp-youtube-wrap-outer {
-	margin-top: calc(-4rem - 10vh);
-	width: calc(50vw + 594px);
-}
-
-.wuswp-youtube-wrap-inner {
-	padding-bottom: 56.25%;
-	position: relative;
-}
-
-.wuswp-youtube-wrap-inner iframe {
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-}
-
-/* Points sections */
-.points {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	-webkit-box-pack: end;
-	    -ms-flex-pack: end;
-	        justify-content: flex-end;
-	min-height: 100vh;
-}
-
-.why-wsu {
 	padding: 2rem;
 	text-align: center;
 }
 
-.multiply {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	list-style: none;
-	padding: 2rem;
-	position: relative;
+.cougar-advantage li:first-child {
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	padding-left: calc(50vw - 594px);
+	text-align: left;
+	width: 50%;
 }
 
-.multiply:before {
-	content: "";
-	height: 100%;
-	left: 0;
-	mix-blend-mode: multiply;
-	position: absolute;
-	top: 0;
+.cougar-advantage li img {
+	display: block;
 	width: 100%;
 }
 
-.multiply.crimson:before {
-	background: #981e32;
+/* Home of the Cougs */
+.home-of-the-cougs .column {
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	color: #fff;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	min-height: 100vh;
 }
 
-.no-mix-blend-mode .multiply.crimson:before {
-	background: rgba(152, 30, 50, .9);
-}
-
-.multiply li {
-	opacity: 0;
+.home-of-the-cougs h2 {
 	position: relative;
-	-webkit-transition: opacity .25s;
-	transition: opacity .25s;
-	width: 25%;
-	z-index: 1;
 }
 
-.multiply li + li {
-	margin-left: 2rem;
-}
-
-.multiply li.show {
-	opacity: 1;
+.home-of-the-cougs li {
+	box-sizing: border-box;
+	padding: 0 1rem;
+	text-align: center;
+	width: calc(100% / 6);
 }
 
 /* Button */
@@ -218,7 +359,46 @@ main {
 .action a {
 	border: 1px solid #981e32;
 	display: inline-block;
-	padding: 1rem 2rem;
+	font-weight: 600;
+	padding: .5rem 3.5rem;
+	text-transform: uppercase;
 	width: auto;
+}
+
+/* Footer */
+.why-footer {
+	background: #f2f4f5;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 4rem 2rem;
+	text-align: center;
+	width: 100%;
+}
+
+.why-footer svg {
+	width: 198px;
+}
+
+.why-footer ul {
+	display: block;
+	list-style: none;
+	padding: .5rem 0;
+}
+
+.why-footer li {
+	display: inline-block;
+	font-size: .6rem;
+}
+
+.why-footer li + li {
+	padding-left: 1rem;
+}
+
+.why-footer a {
+	color: #717171;
+}
+
+.why-footer a:hover {
+	color: #981e32;
 }
 /*# sourceMappingURL=style.css.map */
