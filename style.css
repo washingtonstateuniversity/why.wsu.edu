@@ -156,6 +156,7 @@ h2 {
 	position: absolute;
 	top: -2rem;
 	width: calc(100% + 4rem);
+	z-index: 1;
 }
 
 /* Why WSU */
@@ -193,7 +194,6 @@ h2 {
 	position: absolute;
 	top: 0;
 	width: 100vw;
-	z-index: -1;
 }
 
 .no-mix-blend-mode .multiply:before {
@@ -218,7 +218,7 @@ h2 {
 }
 
 .animate > li > div {
-	left: -101%;
+	left: -105%;
 	position: relative;
 	-webkit-transition: left .4s cubic-bezier(.02, .01, .47, 1);
 	transition: left .4s cubic-bezier(.02, .01, .47, 1);
@@ -335,6 +335,10 @@ h2 {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	min-height: 100vh;
+}
+
+.home-of-the-cougs h2 {
+	position: relative;
 }
 
 .home-of-the-cougs li {
