@@ -10,6 +10,24 @@
 		}
 	}, false );
 
+	/**
+	 * Determine if the current view is an iOS device.
+	 *
+	 * @return {boolean}
+	 */
+	var is_iOS = function() {
+		return ( window.navigator.userAgent.match( /(iPad|iPhone|iPod)/ig ) ? true : false );
+	};
+
+	/**
+	 * Determine if the current view is an Android device.
+	 *
+	 * @return {boolean}
+	 */
+	var is_Android = function() {
+		return ( window.navigator.userAgent.match( /(Android)/ig ) ? true : false );
+	};
+
 	// Fire intro text effects.
 	function introText() {
 		$( ".intro p span" ).each( function( i ) {
@@ -214,8 +232,13 @@
 
 	// Fire functions once the document is ready.
 	$( document ).ready( function() {
+		if ( !is_iOS() && !is_Android() ) {
+			animateListItems();
+		} else {
+			$( "body" ).addClass( "mobile" ); // Since I thought it would be smart to dequeue spine.js...
+		}
+
 		introText();
-		animateListItems();
 	} );
 
 	$( window ).on( "load scroll resize", fix_header );
