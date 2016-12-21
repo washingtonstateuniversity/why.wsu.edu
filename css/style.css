@@ -171,7 +171,7 @@ section a {
 	border-radius: 3px;
 	margin-left: auto;
 	padding: 10px 24px;
-	transition: border-color .4s;
+	transition: border-color .4s, color .4s;
 }
 
 .why-header .secondary a:last-child:hover {
@@ -680,6 +680,27 @@ section a {
 		max-width: none;
 		width: 100%;
 	}
+
+	h2 {
+		font-size: 3.3em;
+		padding-top: 40px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	p.intro {
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-bottom: 40px;
+	}
+
+	.why-wsu h3 {
+		padding: 30px 40px;
+	}
+
+	.why-wsu ul li p {
+		padding: 0 40px 1em;
+	}
 }
 
 @media (max-width: 989px) {
@@ -724,19 +745,6 @@ section a {
 		margin-left: 58px;
 	}
 
-	h2 {
-		font-size: 3.3em;
-		padding-top: 40px;
-		padding-left: 40px;
-		padding-right: 40px;
-	}
-
-	p.intro {
-		padding-left: 40px;
-		padding-right: 40px;
-		padding-bottom: 40px;
-	}
-
 	.intro .column,
 	.why-wsu .column {
 		min-height: 0;
@@ -757,14 +765,6 @@ section a {
 	.why-wsu li + li {
 		margin-left: 0;
 		margin-top: 2rem;
-	}
-
-	.why-wsu h3 {
-		padding: 30px 40px;
-	}
-
-	.why-wsu ul li p {
-		padding: 0 40px 1em;
 	}
 
 	.animate {
@@ -818,6 +818,10 @@ section a {
 	.wsuwp-youtube-wrap-outer {
 		width: calc(100% - 40px);
 		left: 40px;
+	}
+
+	.wsuwp-youtube-wrap-outer:after {
+		content: none;
 	}
 
 	.cougar-advantage li {
