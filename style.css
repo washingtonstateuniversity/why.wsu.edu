@@ -361,6 +361,7 @@ h2 {
 	transition: left .4s cubic-bezier(.02, .01, .47, 1);
 }
 
+.mobile .animate > li > div,
 .animate > li.show > div {
 	left: 0;
 }
