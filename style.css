@@ -80,8 +80,8 @@ h2 {
 	}
 }
 
-/* Pillar */
-.pillar {
+/* Header */
+.why-header {
 	left: 0;
 	margin: 0 auto;
 	max-width: 1188px;
@@ -89,9 +89,10 @@ h2 {
 	right: 0;
 	top: 0;
 	width: calc(100% - 4rem);
+	z-index: 2;
 }
 
-.pillar a {
+.pillar {
 	background: #981e32;
 	display: block;
 	height: 193px;
@@ -99,12 +100,75 @@ h2 {
 	right: 0;
 	top: 0;
 	width: 116px;
-	z-index: 3;
 }
 
 .pillar svg {
 	bottom: 0;
 	position: absolute;
+}
+
+.why-header .secondary {
+	display: none;
+}
+
+.why-header.fixed {
+	background: #fff;
+	height: 58px;
+	position: fixed;
+	top: 4px;
+}
+
+.why-header.fixed:before {
+	background: #fff;
+	content: "";
+	height: 100%;
+	left: -2rem;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	z-index: -1;
+}
+
+.why-header.fixed .pillar {
+	float: left;
+	height: 96px;
+	position: relative;
+	width: 58px;
+}
+
+.why-header.fixed .secondary {
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: .75rem;
+	height: 58px;
+	margin-left: 58px;
+}
+
+.why-header .secondary a {
+	color: #5e6a71;
+	text-transform: uppercase;
+}
+
+.why-header .secondary a:first-child {
+	margin-left: 36px;
+}
+
+.why-header .secondary a:last-child {
+	border: 1px solid #e7e8ea;
+	border-radius: 3px;
+	margin-left: auto;
+	padding: 6px 24px;
+}
+
+@media screen and (max-width: 530px) {
+
+	.why-header .secondary a:last-child {
+		display: none;
+	}
 }
 
 /* Top section */
@@ -273,13 +337,6 @@ h2 {
 	background: rgba(152, 30, 50, .9);
 }
 
-@media only screen and (min-width: 1220px) {
-
-	.multiply:before {
-		left: calc(-50vw + 594px);
-	}
-}
-
 /* Animation */
 .animate {
 	display: -webkit-box;
@@ -353,7 +410,7 @@ h2 {
 	display: flex;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
-	left: calc(-50vw + 594px);
+	left: 0;
 	list-style: none;
 	padding: 0;
 	position: relative;
@@ -477,5 +534,32 @@ h2 {
 
 .why-footer a:hover {
 	color: #981e32;
+}
+
+@media screen and (min-width: 1220px) {
+
+	.why-header.fixed:before,
+	.multiply:before,
+	.cougar-advantage ul {
+		left: calc(-50vw + 594px);
+	}
+}
+
+@media screen and (min-width: 990px) {
+
+	.admin-bar .why-header.fixed {
+		top: 36px;
+	}
+
+	.admin-bar .intro h1 {
+		margin-top: 32px;
+	}
+}
+
+@media screen and (max-width: 989px) {
+
+	#jacket #binder main {
+		margin-top: 64px;
+	}
 }
 /*# sourceMappingURL=style.css.map */
