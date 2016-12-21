@@ -217,15 +217,15 @@
 			dist = 193 - $( window ).scrollTop(), // 193 is the height of the pillar
 			width = $( window ).width();
 
-		if ( width <= 990 && !$header.hasClass( "fixed" ) ) {
+		if ( width <= 989 && !$header.hasClass( "fixed" ) ) {
 			$header.addClass( "fixed" );
 		}
 
-		if ( width > 990 && dist <= 58 && !$header.hasClass( "fixed" ) ) {
+		if ( width > 989 && dist <= 58 && !$header.hasClass( "fixed" ) ) {
 			$header.addClass( "fixed" );
 		}
 
-		if ( width > 990 && dist > 58 && $header.hasClass( "fixed" ) ) {
+		if ( width > 989 && dist > 58 && $header.hasClass( "fixed" ) ) {
 			$header.removeClass( "fixed" );
 		}
 	}
