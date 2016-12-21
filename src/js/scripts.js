@@ -17,7 +17,7 @@
 
 			setTimeout( function() {
 				span.addClass( "show" );
-			}, i * 500 );
+			}, i * 250 );
 		} );
 	}
 
@@ -193,9 +193,30 @@
 		}
 	};
 
+	// Fix the header element
+	function fix_header() {
+		var $header = $( ".why-header" ),
+			dist = 193 - $( window ).scrollTop(), // 193 is the height of the pillar
+			width = $( window ).width();
+
+		if ( width <= 990 && !$header.hasClass( "fixed" ) ) {
+			$header.addClass( "fixed" );
+		}
+
+		if ( width > 990 && dist <= 58 && !$header.hasClass( "fixed" ) ) {
+			$header.addClass( "fixed" );
+		}
+
+		if ( width > 990 && dist > 58 && $header.hasClass( "fixed" ) ) {
+			$header.removeClass( "fixed" );
+		}
+	}
+
 	// Fire functions once the document is ready.
 	$( document ).ready( function() {
 		introText();
 		animateListItems();
 	} );
+
+	$( window ).on( "load scroll resize", fix_header );
 }( jQuery, window, document ) );
