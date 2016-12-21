@@ -149,7 +149,7 @@ h2 {
 
 @media screen and (max-width: 530px) {
 
-	.why-header .secondary a:last-child {
+	.why-header .secondary a:first-child {
 		display: none;
 	}
 }
