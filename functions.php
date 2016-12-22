@@ -7,7 +7,7 @@ class Why_WSU_Theme {
 	 *
 	 * @since 0.0.1
 	 */
-	var $script_version = '0.0.5';
+	var $script_version = '0.0.6';
 
 	/**
 	 * @var Why_WSU_Theme
