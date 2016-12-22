@@ -292,7 +292,7 @@ section a {
 	z-index: 99;
 }
 
-.wuswp-youtube-wrap-inner {
+.wsuwp-youtube-wrap-inner {
 	background: url(https://why.wsu.edu/wp-content/uploads/sites/1552/2016/12/img-video-placeholder.jpg) center no-repeat #fff;
 	background-size: cover;
 	mix-blend-mode: multiply;
@@ -300,12 +300,12 @@ section a {
 	position: relative;
 }
 
-.playing .wuswp-youtube-wrap-inner {
+.playing .wsuwp-youtube-wrap-inner {
 	mix-blend-mode: normal;
 }
 
-.wuswp-youtube-wrap-inner:before,
-.wuswp-youtube-wrap-inner:after {
+.wsuwp-youtube-wrap-inner:before,
+.wsuwp-youtube-wrap-inner:after {
 	content: "";
 	display: block;
 	left: 50%;
@@ -313,7 +313,7 @@ section a {
 	top: 50%;
 }
 
-.wuswp-youtube-wrap-inner:before {
+.wsuwp-youtube-wrap-inner:before {
 	background: #981e32;
 	border-radius: 50%;
 	height: 60px;
@@ -323,7 +323,7 @@ section a {
 	z-index: -1;
 }
 
-.wuswp-youtube-wrap-inner:after {
+.wsuwp-youtube-wrap-inner:after {
 	border: 14px solid transparent;
 	border-left: 20px solid #fff;
 	margin: -14px 0 0 -7px;
