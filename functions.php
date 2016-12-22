@@ -92,10 +92,11 @@ class Why_WSU_Theme {
 
 	/**
 	 * Inserts tracking tags used for retargeting with Carnegie Communications.
-	 * 
+	 *
 	 * @since 0.0.7
 	 */
 	public function carnegie_tracking_tags() {
+		// @codingStandardsIgnoreStart
 		?>
 		<!-- Google Code for Remarketing Tag -->
 		<!--------------------------------------------------
@@ -131,6 +132,7 @@ class Why_WSU_Theme {
 		<!-- DO NOT MODIFY -->
 		<!-- End Facebook Pixel Code -->
 		<?php
+		// @codingStandardsIgnoreEnd
 	}
 }
 
